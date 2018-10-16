@@ -2,7 +2,7 @@ This is the readme for Unauthenicated Stored Cross-site scripting XSS.
 I used WordPress 4.2 to achieve this vunerability but it affects any version before that.
 
 Here is my gif: 
-<img src="Unathenticated_comment_xss" width="800">
+![](Unathenticated_comment_xss)
 
 In order to recreate this, you can use any account that has access to comment on the main page. I'll post the link to the code
 that I pulled in order to recreate this. 
