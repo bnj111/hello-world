@@ -1,0 +1,20 @@
+This is the readme for file_large_xxs.gif. The vunerability is called Authenticated Store Cross-site scripting via Image filename.
+
+I used version 4.2 of Wordpress but it affects any version before that.
+
+Here is my gif: 
+![](file_large_xxs)
+
+In order to recreate this, you'll have to have a large enough image file (20mb+). I went to a nasa site and grabbed an image there.
+
+link:
+https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_vulnerability_in_wordpress_due_to_unsafe_processing_of_file_names.html
+
+Here is the proof of concept available at that link:
+
+Name your file this. "cengizhansahinsumofpwn<img src=a onerror=alert(document.cookie)>.jpg", In windows it gave me some issues
+with having the character "<" so I had to switch over to kali linux for me to name it. MAKE SURE YOU PUT QUOTES SURROUNDING THE
+FILE NAME IN LINUX or it will not work (like presented above). Once you name it this, you can use the admin priviledge and go to
+http://wpdistillery.vm/wp-admin/media-new.php. This is where you will upload the file image and it should pop up the alert.
+
+If you have any issues, follow my gif.
