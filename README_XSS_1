@@ -1,0 +1,17 @@
+This is the readme for Unauthenicated Stored Cross-site scripting XSS.
+I used WordPress 4.2 to achieve this vunerability but it affects any version before that.
+
+Here is my gif: 
+<img src="Unathenticated_comment_xss" width="800">
+
+In order to recreate this, you can use any account that has access to comment on the main page. I'll post the link to the code
+that I pulled in order to recreate this. 
+
+link:
+http://klikki.fi/adv/wordpress2.html
+
+Here is the proof of concept available at that link:
+<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>
+
+You'll have to modify this code a bit by adding atleast 128kb of A's and when you post the comment it should pop up hello world!
+If you are having trouble recreating look at my gif and it will show the code I used.
