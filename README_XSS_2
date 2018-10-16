@@ -2,3 +2,19 @@ This is the readme for authenticated_xss.gif. It is called Authenticated Store C
 
 I used version 4.2 of Wordpress but it affects any version before that.
 
+Here is my gif: 
+![](authenticated_xxs)
+
+In order to recreate this, you'll have to have an account with atleast contributor access to recreate this. So you would have
+to login as admin and create a user with atleast those priviledges. Here is the link I used to recreate this.
+
+link:
+http://klikki.fi/adv/wordpress3.html
+
+Here is the proof of concept available at that link:
+
+<a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>
+
+Use this code and create a new post. Tab over to the text tab instead of visual and post this inside there. Name the page
+whatever you would like to and post it and it should pop up the test alert when the link is clicked. 
+If you have any issues follow the gif I created.
